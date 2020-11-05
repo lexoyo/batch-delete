@@ -1,17 +1,22 @@
-Command line utility which displays the size of folders (recursively) and files in your cloud storage (e.g. Dropbox and more). Inspired by the [`du` (disk usage) command](http://www.linuxcommand.org/lc3_man_pages/du1.html).
+Command line utility to batch delete folders from Github, Dropbox or your file system.
 
 Supports **Dropbox, Github, FTP, SFTP, Webdav, NextCloud, OwnCloud** with oauth when available.
 
-This is an efficient way to explore your online storage to know where the space is being wasted, giving you an idea of where to start cleaning.
+This is an efficient way to be clear data which is good for your online storage as well as for mother earth.
+
+See also [this tool to explore your cloud storage and detect which files and folders to start with](https://github.com/lexoyo/cloud-disk-usage)
+
+Road map
+
+* [x] recursively delete a folder from all supported services
+* [x] oauth to connect to github and dropbox
+* [x] remember connection token from oauth
+* [ ] use batch instead of delete each file with a commit etc
+* [ ] option to confirm deletion
 
 ## Synopsis
 
-`cdu SERVICE FILE [OPTION]...`
-
-Supported options
-
-* `-a`, `--all`: write counts for all files, not just directories
-* `-h`, `--human-readable`: print sizes in human readable format (e.g., 1K 234M 2G)
+`bd SERVICE FILE [OPTION]...`
 
 Supported services
 
@@ -29,45 +34,25 @@ Supported services
 Install the npm package
 
 ```
-$ npm install -g cloud-disk-usage
+$ npm install -g batch-delete
 ```
 
-Scan the local `Documents` folder
+Delete the local `Documents` folder
 
 ```
-$ cdu fs ~/Videos
-9568    /home/lexoyo/Videos/Webcam
-116751  /home/lexoyo/Videos/peek
-1852703 /home/lexoyo/Videos
+$ bd fs ~/Videos
+Done.
 ```
 
-With options
+Delete remote folders:
 
 ```
-$ cdu fs ~/Videos -ah
-9.6 M   /home/lexoyo/Videos/Webcam/2018-07-24-185812.webm
-9.6 M   /home/lexoyo/Videos/Webcam
-7.6 M   /home/lexoyo/Videos/peek/output.gif
-7.6 M /home/lexoyo/Videos/peek
-250.5 M   /home/lexoyo/Videos/hover.gif
-750.5 M   /home/lexoyo/Videos/merge.gif
-7.1 k /home/lexoyo/Videos/scrollbars.gif
-1.0 G   /home/lexoyo/Videos
-```
-
-Scan remote folders:
-
-```
-$ cdu dropbox Photos
-$ cdu ftp www
-$ cdu github repo1/master/
-```
-
-for example the command `cdu dropbox Photos` will output something like this
-
-```
-2075407 Photos/Sample Album
-2075407 Photos
+$ bd dropbox Photos
+Done.
+$ bd ftp www
+Done.
+$ bd github repo1/master/
+Done.
 ```
 
 ## Development
@@ -80,7 +65,7 @@ $ npm i
 
 ### test
 
-Scan the local `Documents` folder
+Delete the `test` folder in the current directory
 
 ```
 $ node ./lib/ fs ~/Documents
