@@ -13,6 +13,7 @@ Road map
 * [x] remember connection token from oauth
 * [x] use batch instead of delete each file
 * [x] option to confirm deletion
+* [ ] support cli patterns in file paths
 
 ## Synopsis
 
