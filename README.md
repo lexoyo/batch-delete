@@ -11,8 +11,8 @@ Road map
 * [x] recursively delete a folder from all supported services
 * [x] oauth to connect to github and dropbox
 * [x] remember connection token from oauth
-* [ ] use batch instead of delete each file with a commit etc
-* [ ] option to confirm deletion
+* [x] use batch instead of delete each file
+* [x] option to confirm deletion
 
 ## Synopsis
 
