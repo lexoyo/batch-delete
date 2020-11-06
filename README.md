@@ -18,9 +18,9 @@ Road map
 
 `bd SERVICE FILE [OPTION]...`
 
-Supported services
+Possible values of the `service` option (case **insensitive**):
 
-| Service | Value of the `service` option |
+| description | Service |
 | ------- | ------- |
 | Dropbox | Dropbox |
 | local file system | fs |
@@ -28,6 +28,10 @@ Supported services
 | SFTP | SFTP |
 | Github | Github |
 | NextCloud/Owncloud (with webdav) | webdav |
+
+Available options:
+
+* `-t` test mode => will prompt which file/folder would be deleted
 
 ## Examples
 
