@@ -1,6 +1,6 @@
 {
   "name": "batch-delete",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Command line utility to batch delete folders from Github, Dropbox or your file system.",
   "main": "lib/index.js",
   "bin": {
