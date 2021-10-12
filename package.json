@@ -11,7 +11,7 @@
     "node": ">=8.0"
   },
   "scripts": {},
-  "repository": "github:lexoyo/cloud-disk-usage",
+  "repository": "github:lexoyo/batch-delete",
   "author": "lexoyo",
   "license": "GPL-3.0",
   "dependencies": {

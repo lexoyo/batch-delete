@@ -1,4 +1,4 @@
-Command line utility to batch delete folders from Github, Dropbox or your file system.
+Command line utility to delete folders from Github, Dropbox or your file system. The deletion is recursive and will be done in 1 operation (e.g 1 commit for github).
 
 Supports **Dropbox, Github, FTP, SFTP, Webdav, NextCloud, OwnCloud** with oauth when available.
 
