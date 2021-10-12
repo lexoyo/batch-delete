@@ -73,5 +73,5 @@ $ npm i
 Delete the `test` folder in the current directory
 
 ```
-$ node ./lib/ fs ~/Documents
+$ node ./lib/ fs test
 ```
